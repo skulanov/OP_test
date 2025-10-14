@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Православия</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Основы Православия</h1>
+            <div id="feedback" class="feedback"></div>
+        </header>
+
+        <main class="quiz-container">
+            <div id="loading" class="loading">
+                <p>Загрузка вопросов...</p>
+            </div>
+
+            <div id="quiz" class="quiz" style="display: none;">
+                <div class="chapter-selector">
+                    <button id="chapter-btn" class="chapter-button">
+                        <span id="chapter-text">Все главы</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div id="chapter-dropdown" class="chapter-dropdown" style="display: none;">
+                        <div class="dropdown-header">
+                            <h3>Выберите главы для проверки знаний:</h3>
+                            <div class="header-buttons">
+                                <button id="select-all-btn" class="select-all-btn">Выбрать все</button>
+                                <button id="deselect-all-btn" class="deselect-all-btn">Снять все</button>
+                            </div>
+                        </div>
+                        <div id="chapter-list" class="chapter-list">
+                            <!-- Список глав с чекбоксами будет добавлен через JavaScript -->
+                        </div>
+                        <div class="dropdown-footer">
+                            <button id="apply-filter-btn" class="apply-filter-btn">Применить</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="question" class="question"></div>
+                
+                <div id="options" class="options">
+                    <!-- Варианты ответов будут добавлены через JavaScript -->
+                </div>
+                
+                <button id="submit-btn" class="btn-primary">Ответить</button>
+            </div>
+
+            <div id="error" class="error" style="display: none;">
+                <p>Ошибка загрузки вопросов. Попробуйте обновить страницу.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
